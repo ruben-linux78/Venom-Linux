@@ -35,10 +35,11 @@ Descomentar línea: 519 and 523 aprox.
  
 Habilitar servicios añadiendolos en: /etc/rc.conf
 
-1. $ sudo vim /etc/rc.conf
+$ sudo vim /etc/rc.conf
+
 libvirtd virtlogd
 
-3. $ sudo reboot
+$ sudo reboot
 
 Si tras crear tu primera maquina virtual te da fallo de “unable to open /dev/net/tun”
 Necesitas cargar el modulo del kernel de tun, para que tu maquina pueda comunicarse con el host anfitrion y conectarse a internet.
