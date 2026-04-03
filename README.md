@@ -29,6 +29,7 @@ Guardar y salir:
 $ sudo vim /etc/libvirt/qemu.conf
 
 Ir a la linea 519 aprox. en USER:
+
 Descomentar línea: 519 and 523 aprox.
 1. user = “your username”
 2. group = “libvirt”
