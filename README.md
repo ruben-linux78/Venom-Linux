@@ -19,20 +19,26 @@ Comprobar y descomentar estas lineas:
 6. auto_unix_ro = “polkit” >>> auto_unix_ro = “none”
 7. auto_unix_rw = “polkit” >>> auto-unix_rw = “none”
 Guardar y salir:
+
 $ sudo vim /etc/libvirt/libvirt.conf
+
 Descomentar:
 1. uri_default = “qemu:///system”
 Guardar y salir:
+
 $ sudo vim /etc/libvirt/qemu.conf
 
-Ir a la linea 519 aprox. USER:
+Ir a la linea 519 aprox. en USER:
 Descomentar línea: 519 and 523 aprox.
 1. user = “your username”
 2. group = “libvirt”
-Habilitar servicios en: /etc/rc.conf
+ 
+Habilitar servicios añadiendolos en: /etc/rc.conf
+
 1. $ sudo vim /etc/rc.conf
 libvirtd virtlogd
-2. $ sudo reboot
+
+3. $ sudo reboot
 
 Si tras crear tu primera maquina virtual te da fallo de “unable to open /dev/net/tun”
 Necesitas cargar el modulo del kernel de tun, para que tu maquina pueda comunicarse con el host anfitrion y conectarse a internet.
@@ -66,6 +72,7 @@ $ sudo mknod /dev/net/tun c 10 200
 $ sudo chmod 666 /dev/net/tun
 
 Para hacer que el modulo del kernel de tun se cargue al inicio del sistema dos opciones:
+
 1. Creamos el archivo: /etc/modules-load.d/qemu-modules.conf y ponemos en el tun:
 
 $ vim /etc/modules-load.d/qemu-modules.conf
