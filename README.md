@@ -10,7 +10,7 @@ Configuración:
 
 $ sudo vim /etc/libvirt/libvirtd.conf
 
-Comprobar y descomentar estas lineas:
+Comprobar y descomentar estas lineas, polkit es opcional:
 1. listen_tls = 0
 2. unix_sock_group = “libvirt”
 3. unix_sock_ro_perms = “0777”
@@ -18,6 +18,7 @@ Comprobar y descomentar estas lineas:
 5. unix_sock_dir = “/run/libvirt”
 6. auto_unix_ro = “polkit” >>> auto_unix_ro = “none”
 7. auto_unix_rw = “polkit” >>> auto-unix_rw = “none”
+
 Guardar y salir:
 
 $ sudo vim /etc/libvirt/libvirt.conf
