@@ -1,7 +1,9 @@
 Instalación de Qemu & Virt Manager en Venom Linux (SysV init).
 
 $ sudo scratch install qemu virt-manager libvirt libvirt-glib libvirt-python openbsd-netcat dnsmasq iptables nftables
+
 $ modprobe kvm-<your CPU>  (For AMD use kvm-amd & for Intel use kvm-intel )
+
 $ sudo usermod -aG kvm,libvirt <username>
 
 Configuración:
